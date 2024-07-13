@@ -10,7 +10,7 @@
             Padding="30"
             HorizontalTextAlignment="Center" />
 
-        <ListView x:Name="listaEstudiantes">
+        <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">
 
             <ListView.Header>
                 <Grid Padding="10" ColumnSpacing="10">
@@ -46,7 +46,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+        <Button x:Name="btnAgregar"
+                    Text="Agregar entudiate"
+                    Clicked="btnAgregar_Clicked"/>
         
     </VerticalStackLayout>
 </ContentPage>

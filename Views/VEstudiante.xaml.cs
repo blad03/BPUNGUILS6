@@ -1,3 +1,4 @@
+using BPUNGUILS6.Models;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 
@@ -20,5 +21,16 @@ public partial class VEstudiante : ContentPage
         estud = new ObservableCollection<Models.estudiantes>(mostrar);
         listaEstudiantes.ItemsSource = estud;
 
+    }
+
+    private void btnAgregar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new Views.VAgregar());
+    }
+
+    private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var objEstudiante = (estudiantes)e.SelectedItem;
+        Navigation.PushAsync(new ActEliminar(objEstudiante));
     }
 }

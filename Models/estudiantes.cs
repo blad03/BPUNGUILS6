@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BPUNGUILS6.Models
 {
-    internal class estudiantes
+    public class estudiantes
     {
         public int codigo {  get; set; }
 

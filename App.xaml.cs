@@ -8,7 +8,7 @@ namespace BPUNGUILS6
         {
             InitializeComponent();
 
-            MainPage = new VEstudiante();
+            MainPage = new NavigationPage(new Views.VEstudiante());
         }
     }
 }
